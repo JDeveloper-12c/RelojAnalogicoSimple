@@ -7,6 +7,6 @@ public class HolaMundo {
 
     public static void main(String[] args) {
         HolaMundo holaMundo = new HolaMundo();
-        System.out.print("Hola Mundo ... \n");
+        System.out.print("Hola Mundo 3 ... \n");
     }
 }
