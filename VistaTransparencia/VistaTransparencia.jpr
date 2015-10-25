@@ -66,8 +66,8 @@
       <list n="dependencyList">
          <hash>
             <hash n="dependable">
-               <url n="sourceOwnerURL" path="../RelojAnalogico.jws"/>
-               <url n="sourceURL" path="../RelojAnalogicoComponente/RelojAnalogicoComponente.jpr"/>
+               <url n="sourceOwnerURL" path="../RelojAnalogicoSimple.jws"/>
+               <url n="sourceURL" path="../RelojAnalogicoSimpleComponente/RelojAnalogicoSimpleComponente.jpr"/>
             </hash>
             <value n="recognizerId" v="oracle.jdeveloper.library"/>
          </hash>

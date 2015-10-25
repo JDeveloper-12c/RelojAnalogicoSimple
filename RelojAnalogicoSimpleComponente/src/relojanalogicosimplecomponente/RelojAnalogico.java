@@ -1,4 +1,4 @@
-package relojanalogicocomponente;
+package relojanalogicosimplecomponente;
 
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;

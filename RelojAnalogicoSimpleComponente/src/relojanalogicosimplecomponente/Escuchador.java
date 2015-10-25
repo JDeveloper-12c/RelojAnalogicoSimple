@@ -1,4 +1,4 @@
-package relojanalogicocomponente;
+package relojanalogicosimplecomponente;
 
 public abstract class Escuchador {
     public Escuchador() {

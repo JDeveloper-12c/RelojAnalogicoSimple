@@ -36,7 +36,7 @@ import javax.swing.JTextField;
 import javax.swing.JToolBar;
 import javax.swing.SwingConstants;
 
-import relojanalogicocomponente.RelojAnalogico;
+import relojanalogicosimplecomponente.RelojAnalogico;
 
 
 public class VentanaPrincipal extends JFrame {

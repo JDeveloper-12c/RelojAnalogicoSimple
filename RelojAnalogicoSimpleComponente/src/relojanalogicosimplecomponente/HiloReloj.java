@@ -1,4 +1,4 @@
-package relojanalogicocomponente;
+package relojanalogicosimplecomponente;
 
 public class HiloReloj extends Thread {
     public HiloReloj() {
