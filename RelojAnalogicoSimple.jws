@@ -23,7 +23,6 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
    </list>
    <list n="listOfChildren">
-      <hash><url n="URL" path="RelojAnalogicoComponente/RelojAnalogicoComponente.jpr"/></hash>
       <hash><url n="URL" path="VistaSimple/VistaSimple.jpr"/></hash>
       <hash><url n="URL" path="VistaTransparencia/VistaTransparencia.jpr"/></hash>
    </list>
