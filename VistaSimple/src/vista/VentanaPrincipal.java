@@ -51,7 +51,7 @@ public class VentanaPrincipal extends JFrame {
         this.setSize(new Dimension(321, 265));
 
         this.getContentPane().add(jPanel1, BorderLayout.CENTER);
-        this.setIconImage(this.iconoBarra.getImage());
+        this.setIconImage(iconoBarra.getImage());
         this.setTitle("Reloj Analógico");
         
         this.addMouseListener(new MouseAdapter() {

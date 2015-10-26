@@ -81,7 +81,7 @@ public class VentanaPrincipal extends JFrame {
                 }
             });
         this.getContentPane().add(jToolBar1, BorderLayout.NORTH);
-        this.setIconImage(this.iconoBarra.getImage());
+        this.setIconImage(iconoBarra.getImage());
         this.setTitle("Reloj Analógico");
         
         this.addMouseListener(new MouseAdapter() {
@@ -116,6 +116,7 @@ public class VentanaPrincipal extends JFrame {
             });
         jButton1.setText("_");
         jButton1.setFocusable(false);
+        jButton1.setToolTipText("Minimiza");
         jButton1.addMouseListener(new MouseAdapter() {
                 public void mouseEntered(MouseEvent e) {
                     jButton1_mouseEntered(e);
@@ -132,6 +133,7 @@ public class VentanaPrincipal extends JFrame {
             });
         jButton2.setText("=");
         jButton2.setFocusable(false);
+        jButton2.setToolTipText("Maximiza");
         jButton2.addMouseListener(new MouseAdapter() {
                 public void mouseEntered(MouseEvent e) {
                     jButton2_mouseEntered(e);
@@ -148,6 +150,7 @@ public class VentanaPrincipal extends JFrame {
             });
         jButton3.setText("X");
         jButton3.setFocusable(false);
+        jButton3.setToolTipText("Cerrar reloj");
         jButton3.addMouseListener(new MouseAdapter() {
                 public void mouseEntered(MouseEvent e) {
                     jButton3_mouseEntered(e);
@@ -164,6 +167,7 @@ public class VentanaPrincipal extends JFrame {
             });
         jButton4.setText("!");
         jButton4.setFocusable(false);
+        jButton4.setToolTipText("Siempre visible");
         jButton4.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     jButton4_actionPerformed(e);

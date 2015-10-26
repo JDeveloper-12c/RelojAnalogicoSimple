@@ -144,6 +144,5 @@ public class RelojAnalogico extends JPanel {
 
     public void miRepaint() {
         super.repaint();
-
     }
 }
