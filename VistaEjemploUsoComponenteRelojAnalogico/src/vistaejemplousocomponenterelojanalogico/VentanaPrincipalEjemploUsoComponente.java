@@ -1,19 +1,17 @@
+
 package vistaejemplousocomponenterelojanalogico;
 
-import javax.swing.JFrame;
-
 /**
- * @author Mtr. Carlos Alberto Privitera. Ejemplo
- * @version 1.0
+ *
+ * @author Mtr. Carlos Alberto Privitera
+ * @version 2.0
  */
-public class VentanaPrincipal extends JFrame {
+public class VentanaPrincipalEjemploUsoComponente extends javax.swing.JFrame {
 
-    public VentanaPrincipal() {
+    /** Creates new form NewJFrame */
+    public VentanaPrincipalEjemploUsoComponente() {
         initComponents();
     }
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private relojanalogicosimplecomponente.RelojAnalogico relojAnalogico1;
-    // End of variables declaration//GEN-END:variables
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -22,29 +20,29 @@ public class VentanaPrincipal extends JFrame {
      */
     @SuppressWarnings("unchecked")
     private void initComponents() {//GEN-BEGIN:initComponents
-        ////////////////////////////////////////////////
-        //Agregar a MyManifest.mf el componente Reloj
-        //Class-Path: RelojAnalogico.jar
+
         relojAnalogico1 = new relojanalogicosimplecomponente.RelojAnalogico();
-        //////////////////////////////////////////////
-        
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Reloj Analógico");
+
+        relojAnalogico1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(relojAnalogico1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addComponent(relojAnalogico1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
-                .addComponent(relojAnalogico1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(relojAnalogico1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
@@ -67,23 +65,26 @@ public class VentanaPrincipal extends JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPrincipalEjemploUsoComponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPrincipalEjemploUsoComponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPrincipalEjemploUsoComponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPrincipalEjemploUsoComponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaPrincipal().setVisible(true);
+                new VentanaPrincipalEjemploUsoComponente().setVisible(true);
             }
         });
     }
 
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private relojanalogicosimplecomponente.RelojAnalogico relojAnalogico1;
+    // End of variables declaration//GEN-END:variables
 
 }

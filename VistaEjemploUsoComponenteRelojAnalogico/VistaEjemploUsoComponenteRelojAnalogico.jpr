@@ -117,7 +117,7 @@
          <hash n="Default">
             <value n="custom" v="false"/>
             <value n="name" v="Default"/>
-            <url n="targetURL" path="src/vistaejemplousocomponenterelojanalogico/VentanaPrincipal.java"/>
+            <url n="targetURL" path="src/vistaejemplousocomponenterelojanalogico/VentanaPrincipalEjemploUsoComponente.java"/>
          </hash>
       </hash>
    </hash>
