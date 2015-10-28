@@ -18,7 +18,19 @@ import java.util.Date;
 import javax.swing.JPanel;
 
 public class RelojAnalogico extends JPanel {
-    //---
+    private HiloReloj hiloReloj;
+    private Escuchador escuchador1 = new Escuchador(){
+        @Override
+        public void lanzador() {
+            dateSistema = new Date();
+            fechaD = formatoFecha.format(dateSistema);
+            horaD = formatoHora.format(dateSistema);
+            segundoActual = Integer.valueOf(formatoSegundoActual.format(dateSistema));
+            minutoActual = Integer.valueOf(formatoMinutoActual.format(dateSistema));
+            horaActual = Integer.valueOf(formatoHoraActual.format(dateSistema));
+            miRepaint();
+        }
+    };
     private SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
     private SimpleDateFormat formatoHora = new SimpleDateFormat("hh:mm:ss");
     private SimpleDateFormat formatoSegundoActual = new SimpleDateFormat("ss");
@@ -35,26 +47,13 @@ public class RelojAnalogico extends JPanel {
     private Float X = new Float(0);
     private Float Y = new Float(0);
     private Float[][] circuloPerimetroXY = new Float[2][61]; //Iniciar en jbInit()
-    Graphics2D g2=null;
-    Date dateSistema=null;
-    GradientPaint gradientPaintAgujaSegundos = new GradientPaint(8, 10, Color.RED, 8, 40, Color.BLACK, true);
-    GradientPaint gradientPaintNumerosHora = new GradientPaint(8, 10, Color.ORANGE, 8, 40, Color.BLACK, true);
-    BasicStroke BasicStrokeSegundos = new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER);
-    BasicStroke BasicStrokeMinutos = new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER);
-    BasicStroke BasicStrokeHora = new BasicStroke(8, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER);
-    
-    Escuchador escuchador = new Escuchador(){
-        @Override
-        public void lanzador() {
-            dateSistema = new Date();
-            fechaD = formatoFecha.format(dateSistema);
-            horaD = formatoHora.format(dateSistema);
-            segundoActual = Integer.valueOf(formatoSegundoActual.format(dateSistema));
-            minutoActual = Integer.valueOf(formatoMinutoActual.format(dateSistema));
-            horaActual = Integer.valueOf(formatoHoraActual.format(dateSistema));
-            miRepaint();
-        }
-    };
+    private Graphics2D g2=null;
+    private Date dateSistema=null;
+    private GradientPaint gradientPaintAgujaSegundos = new GradientPaint(8, 10, Color.RED, 8, 40, Color.BLACK, true);
+    private GradientPaint gradientPaintNumerosHora = new GradientPaint(8, 10, Color.ORANGE, 8, 40, Color.BLACK, true);
+    private BasicStroke BasicStrokeSegundos = new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER);
+    private BasicStroke BasicStrokeMinutos = new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER);
+    private BasicStroke BasicStrokeHora = new BasicStroke(8, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER);
     private BorderLayout borderLayout1 = new BorderLayout();
 
     public RelojAnalogico() {
@@ -69,6 +68,12 @@ public class RelojAnalogico extends JPanel {
         this.setLayout(borderLayout1);
         this.setSize(new Dimension(301, 226));
         this.setBackground(new Color(247, 247, 247));
+        crearCirculo();
+        hiloReloj = new HiloReloj();
+        hiloReloj.setVisor(escuchador1);
+        hiloReloj.start();
+    }
+    private void crearCirculo() {
         int x=0;
         Float radianes = new Float(0);
         for(int i=0-84; i<366-84; i=i+6) { //360°/6=60 
@@ -76,12 +81,8 @@ public class RelojAnalogico extends JPanel {
             circuloPerimetroXY[0][x]=(float)Math.cos(radianes);
             circuloPerimetroXY[1][x]=(float)Math.sin(radianes);
             x=x+1;
-        }
-        HiloReloj hiloReloj = new HiloReloj();
-        hiloReloj.setVisor(escuchador);
-        hiloReloj.start();
+        }        
     }
-    
     public void paint(Graphics g) {
         super.paint(g);
         g2 = (Graphics2D) g;
